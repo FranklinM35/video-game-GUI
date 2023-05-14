@@ -1,0 +1,24 @@
+def withpc(game_board):
+    game_board.destroy()
+    game_board = Tk()
+    game_board.title("Tic Tac Toe")
+    l1 = Button(game_board, text="Player : X", width=10)
+    l1.grid(row=1, column=1)
+    l2 = Button(game_board, text="Computer : O",
+                width=10, state=DISABLED)
+ 
+    l2.grid(row=2, column=1)
+    gameboard_pc(game_board, l1, l2)
+
+def withplayer(game_board):
+    game_board.destroy()
+    game_board = Tk()
+    game_board.title("Tic Tac Toe")
+    l1 = Button(game_board, text="Player 1 : X", width=10)
+ 
+    l1.grid(row=1, column=1)
+    l2 = Button(game_board, text="Player 2 : O",
+                width=10, state=DISABLED)
+ 
+    l2.grid(row=2, column=1)
+    gameboard_pl(game_board, l1, l2)
